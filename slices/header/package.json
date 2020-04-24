@@ -1,0 +1,27 @@
+{
+    "name": "@portal/slice-header",
+    "version": "1.0.0",
+    "main": "src/entry.js",
+    "module": "src/entry.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack --config webpack/webpack.config.common.js",
+        "build:prod": "webpack --config webpack/webpack.config.prod.js",
+        "test": "yarn jest"
+    },
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "babel-jest": "^25.4.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "jest": "^25.4.0",
+        "jest-enzyme": "^7.1.2",
+        "jest-haste-map": "^25.4.0",
+        "jest-resolve": "^25.4.0",
+        "jest-styled-components": "^7.0.2"
+    }
+}

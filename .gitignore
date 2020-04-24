@@ -1,0 +1,53 @@
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.coverage
+*.vs
+
+# Style Cop files
+StyleCop.Cache
+
+# JetBrains and VSCode
+.idea/
+.vscode/
+
+node_modules
+*.log
+
+# testing
+/coverage
+.jest-cache
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# slices
+slices/*/coverage/**
+slices/*/build/**
+slices/*/lib/
+slices/**/packages
+
+# packages
+packages/*/coverage/**
+packages/*/build/**
+packages/*/lib/
+packages/**/packages
+
+# apps
+apps/*/coverage/**
+apps/*/build/**
+apps/*/es/
+apps/*/lib/

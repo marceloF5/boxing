@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        // "plugin:react/recommended",
+        "airbnb",
+        "prettier",
+        "prettier/react"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks", "prettier"],
+    "rules": {
+        "import/no-cycle": [2, { "maxDepth": 1 }],
+        "prettier/prettier": "error",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-filename-extension": [
+            "warn",
+            { "extensions": [".jsx", ".js"] }
+        ],
+        "import/prefer-default-export": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+        "no-param-reassign": ["error", { "props": false }],
+        "no-console": ["error", { "allow": ["tron"] }],
+        "import/extensions": "error"
+    }
+    // "settings": {
+    //     "import/resolver": {
+    //         "babel-plugin-root-import": {
+    //             "rootPathSuffix": "src"
+    //         }
+    //     }
+    // }
+}
