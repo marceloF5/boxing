@@ -5,6 +5,7 @@
     "module": "src/entry.js",
     "license": "MIT",
     "scripts": {
+        "start": "webpack-dev-server --progress --open --config webpack/webpack.config.dev.js",
         "build": "webpack --config webpack/webpack.config.common.js",
         "build:prod": "webpack --config webpack/webpack.config.prod.js",
         "test": "yarn jest"

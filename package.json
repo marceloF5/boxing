@@ -7,6 +7,7 @@
     "license": "MIT",
     "scripts": {
         "start:dist": "node server.js",
+        "start:header": "webpack-dev-server --progress --open --config slices/header/webpack/webpack.config.dev.js",
         "build:prod": "webpack --env.production --config webpack/webpack.config.prod.js",
         "test": "yarn jest",
         "test:button": "yarn workspace @ui/button jest -u",

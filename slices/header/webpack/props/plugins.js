@@ -1,6 +1,8 @@
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pluginsBase = [
     new CleanWebpackPlugin(),
@@ -16,4 +18,12 @@ const pluginsBase = [
     }),
 ];
 
-module.exports = { pluginsBase };
+const pluginsCustom = [
+    new HtmlWebpackPlugin({
+        chunks: ['main'],
+        filename: 'index.html',
+        template: path.resolve(__dirname, 'template.html'),
+    }),
+];
+
+module.exports = { pluginsBase, pluginsCustom };
