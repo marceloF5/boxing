@@ -17,8 +17,7 @@
         "slices/*"
     ],
     "dependencies": {
-        "axios": "^0.19.2",
-        "express": "^4.17.1"
+        "axios": "^0.19.2"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
