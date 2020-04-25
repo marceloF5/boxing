@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> should render primary button 1`] = `
-"<button disabled={false} className=\\"Button__StyledButton-pqwbd2-0 hdYNkZ\\">
+"<button disabled={false} className=\\"Button__StyledButton-pqwbd2-0 lhIwQt\\">
   Add to Bag
 </button>"
 `;
 
 exports[`<Button /> should render secondary button 1`] = `
-"<button disabled={false} className=\\"Button__StyledButton-pqwbd2-0 dLaeYz\\">
+"<button disabled={false} className=\\"Button__StyledButton-pqwbd2-0 leOBmX\\">
   Add to Bag
 </button>"
 `;

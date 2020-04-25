@@ -6,15 +6,11 @@
     "module": "apps/src/entry.js",
     "license": "MIT",
     "scripts": {
-        "start:dist": "node server.js",
-        "start:header": "webpack-dev-server --progress --open --config slices/header/webpack/webpack.config.dev.js",
-        "build:prod": "yarn test && yarn build:header && yarn build:footer && webpack --env.production --config webpack/webpack.config.prod.js",
-        "build:header": "webpack --env.production --config slices/header/webpack/webpack.config.prod.js",
-        "build:footer": "webpack --env.production --config slices/footer/webpack/webpack.config.prod.js",
-        "test": "yarn jest",
-        "test:button": "yarn workspace @ui/button jest -u",
-        "test:header": "yarn workspace @portal/slice-header jest -u",
-        "lint": "eslint '**/**/src/**/*.js' --fix --ignore-pattern node_modules"
+        "start:all": "lerna run start --parallel",
+        "build:all": "lerna run build",
+        "test:all": "lerna run test",
+        "lint:all": "eslint '**/**/src/**/*.js' --fix --ignore-pattern node_modules",
+        "build:prod": "yarn test:all && yarn build:all && webpack --env.production --config webpack/webpack.config.prod.js"
     },
     "workspaces": [
         "packages/*",
@@ -55,6 +51,7 @@
         "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.2.0",
         "husky": "^4.2.5",
+        "lerna": "^3.20.2",
         "lint-staged": "^10.1.7",
         "mini-css-extract-plugin": "^0.9.0",
         "node-sass": "^4.13.1",
@@ -70,8 +67,8 @@
     },
     "lint-staged": {
         "**/**/src/**/*.js": [
-            "yarn lint",
-            "yarn test --bail --findRelatedTests",
+            "yarn lint:all",
+            "yarn jest --bail --findRelatedTests",
             "git add"
         ]
     },

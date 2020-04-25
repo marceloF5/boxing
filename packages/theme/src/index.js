@@ -1,4 +1,4 @@
-export const spacing = {
+export default {
     extraLarge: '32px',
     large: '24px',
     medium: '16px',

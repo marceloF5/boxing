@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { spacing } from '@ui/theme';
+// eslint-disable-next-line import/no-unresolved
+import spacing from '@ui/theme';
 
 const APPEARANCES = {
     PRIMARY: 'primary',
@@ -21,7 +22,7 @@ const StyledButton = styled.button`
     min-width: 200px;
     outline: none;
     overflow: hidden;
-    padding: 0 32px;
+    padding: 0 ${spacing};
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
