@@ -1,23 +1,12 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pluginsBase = [
-    new CleanWebpackPlugin(),
-    new HtmlWebPackPlugin({
-        filename: 'index.html',
-        // create HTML Template com os id necessários
-        template: path.join(__dirname, 'template.html'),
-        minify: {
-            removeComments: true,
-            collapseWhitespace: false,
-        },
-    }),
     new MiniCssExtractPlugin({
-        filename: '[name].[hash].css',
+        filename: 'main.[hash].css',
     }),
     new ManifestPlugin({
         fileName: 'manifest.json',
@@ -28,7 +17,10 @@ const pluginsBase = [
     }),
 ];
 
+const pluginProd = [...pluginsBase, new CleanWebpackPlugin()];
+
 const pluginsCustom = [
+    ...pluginsBase,
     new HtmlWebpackPlugin({
         chunks: ['main'],
         filename: 'index.html',
@@ -36,4 +28,4 @@ const pluginsCustom = [
     }),
 ];
 
-module.exports = { pluginsBase, pluginsCustom };
+module.exports = { pluginsBase, pluginProd, pluginsCustom };

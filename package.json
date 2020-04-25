@@ -8,7 +8,9 @@
     "scripts": {
         "start:dist": "node server.js",
         "start:header": "webpack-dev-server --progress --open --config slices/header/webpack/webpack.config.dev.js",
-        "build:prod": "webpack --env.production --config webpack/webpack.config.prod.js",
+        "build:prod": "yarn test && yarn build:header && yarn build:footer && webpack --env.production --config webpack/webpack.config.prod.js",
+        "build:header": "webpack --env.production --config slices/header/webpack/webpack.config.prod.js",
+        "build:footer": "webpack --env.production --config slices/footer/webpack/webpack.config.prod.js",
         "test": "yarn jest",
         "test:button": "yarn workspace @ui/button jest -u",
         "test:header": "yarn workspace @portal/slice-header jest -u",

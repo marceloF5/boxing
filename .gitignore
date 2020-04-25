@@ -16,11 +16,8 @@ node_modules
 *.log
 
 # testing
-/coverage
 .jest-cache
 
-# production
-/build
 
 # misc
 .DS_Store
@@ -33,21 +30,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# app-portal
+apps/app-portal/*.html
+apps/app-portal/*.js
+apps/app-portal/*.json
 
-# slices
-slices/*/coverage/**
-slices/*/build/**
-slices/*/lib/
-slices/**/packages
-
-# packages
-packages/*/coverage/**
-packages/*/build/**
-packages/*/lib/
-packages/**/packages
-
-# apps
-apps/*/coverage/**
-apps/*/build/**
-apps/*/es/
-apps/*/lib/
+# slices-build
+apps/**/slices-build/*.css
+apps/**/slices-build/*.css.map
+apps/**/slices-build/*.js
+apps/**/slices-build/*.js.map
+apps/**/slices-build/*.js.LICENSE
+apps/**/slices-build/*.json

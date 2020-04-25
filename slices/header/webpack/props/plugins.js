@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pluginsBase = [
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: 'main.[hash].css',
     }),
@@ -18,7 +17,10 @@ const pluginsBase = [
     }),
 ];
 
+const pluginProd = [...pluginsBase, new CleanWebpackPlugin()];
+
 const pluginsCustom = [
+    ...pluginsBase,
     new HtmlWebpackPlugin({
         chunks: ['main'],
         filename: 'index.html',
@@ -26,4 +28,4 @@ const pluginsCustom = [
     }),
 ];
 
-module.exports = { pluginsBase, pluginsCustom };
+module.exports = { pluginsBase, pluginProd, pluginsCustom };
