@@ -1,14 +1,34 @@
 const path = require('path');
 
-const slices = ['header', 'footer'];
+module.exports = (env) => {
+    let slices = [];
+    const sliceParam = env.slice || '';
+    const defaultPath = '../../apps/slices-map/main.js';
 
-const entryPointObj = slices.map((slice) => ({
-    [slice]: path.resolve(__dirname, `../../apps/slices-map/main.js`),
-}));
+    if (typeof sliceParam === 'boolean' && sliceParam) {
+        // vai até a arvore slices e pegar todas slices
+        // retornar um array das slices
+        slices = ['header', 'footer'];
+    } else {
+        slices.push(sliceParam.split('-')[1]);
+    }
 
-const entryPoints = entryPointObj.reduce((acc, curr) => ({
-    ...acc,
-    ...curr,
-}));
+    const entryPointObj = slices.map((slice) => {
+        const slicePath = `../../slices/${slice}/src/entry.js`;
+        const main = sliceParam ? 'main' : slice;
 
-module.exports = { ...entryPoints };
+        return {
+            [main]: path.resolve(
+                __dirname,
+                sliceParam ? slicePath : defaultPath
+            ),
+        };
+    });
+
+    const entryPoints = entryPointObj.reduce((acc, curr) => ({
+        ...acc,
+        ...curr,
+    }));
+
+    return { ...entryPoints };
+};
