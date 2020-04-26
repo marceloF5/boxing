@@ -13,6 +13,7 @@ module.exports = (env) => {
         slices.push(sliceParam.split('-')[1]);
     }
 
+    console.log('slice', slices);
     const entryPointObj = slices.map((slice) => {
         const slicePath = `../../slices/${slice}/src/entry.js`;
         const main = sliceParam ? 'main' : slice;

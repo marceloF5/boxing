@@ -1,8 +1,9 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.config.common');
-const { pluginProd } = require('./props/plugins');
+const plugins = require('./props/plugins');
 
-module.exports = merge(common, {
-    devtool: 'source-map',
-    plugins: pluginProd,
-});
+module.exports = (env) =>
+    merge(common(env), {
+        devtool: 'source-map',
+        plugins: plugins(env).pluginProd,
+    });

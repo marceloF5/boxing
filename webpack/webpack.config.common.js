@@ -2,7 +2,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const entry = require('./props/entry');
 const output = require('./props/output');
 const { moduleBase } = require('./props/module');
-const { pluginsBase } = require('./props/plugins');
+const plugins = require('./props/plugins');
 
 module.exports = (env) => {
     return {
@@ -11,7 +11,7 @@ module.exports = (env) => {
         resolve: {
             extensions: ['.jsx', '.js'],
         },
-        plugins: pluginsBase,
+        plugins: plugins(env).pluginsBase,
         module: moduleBase,
         optimization: {
             minimizer: [

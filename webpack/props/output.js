@@ -13,7 +13,7 @@ module.exports = (env) => {
 
     const outputBase = {
         path: path.resolve(__dirname, slicePath),
-        filename: `[name].[hash].js`,
+        filename: `[name].${env.production ? '"[hash]"' : ''}.js`,
         publicPath: '/',
     };
 
