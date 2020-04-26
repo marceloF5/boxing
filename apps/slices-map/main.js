@@ -1,21 +1,25 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'babel-polyfill';
 import axios from 'axios';
 
+// console.log('ENTROU AQUI no FICHEIRO');
+// eslint-disable-next-line no-console
 const handleError = (error) => console.error(error);
 const handleSucess = (directory, { data: manifest }) => {
+    // eslint-disable-next-line no-console
     console.log('Manifest configuration loaded:', manifest);
 
-    let style = document.createElement('link');
-    let script = document.createElement('script');
+    const style = document.createElement('link');
+    const script = document.createElement('script');
 
     style.rel = 'stylesheet';
-    style.href = directory + '/' + manifest.maincss;
+    style.href = `${directory}/${manifest.maincss}`;
 
     script.type = 'text/javascript';
-    script.src = directory + '/' + manifest.mainjs;
+    script.src = `${directory}/${manifest.mainjs}`;
 
-    document.head.appendChild(style);
-    document.body.appendChild(script);
+    manifest.maincss && document.head.appendChild(style);
+    manifest.mainjs && document.body.appendChild(script);
 };
 const loadManifest = (name) => {
     axios
