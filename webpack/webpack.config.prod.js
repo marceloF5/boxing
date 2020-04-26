@@ -5,5 +5,8 @@ const plugins = require('./props/plugins');
 module.exports = (env) =>
     merge(common(env), {
         devtool: 'source-map',
-        plugins: plugins(env).pluginProd,
+        plugins:
+            typeof env.slice !== 'boolean'
+                ? plugins(env).pluginsBase
+                : plugins(env).pluginsCustom,
     });

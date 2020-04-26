@@ -30,15 +30,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# app-portal
-apps/app-portal/*.html
-apps/app-portal/*.js
-apps/app-portal/*.json
-
 # slices-build
-apps/**/slices-build/*.css
-apps/**/slices-build/*.css.map
-apps/**/slices-build/*.js
-apps/**/slices-build/*.js.map
-apps/**/slices-build/*.js.LICENSE
-apps/**/slices-build/*.json
+apps/slices-build/**/*.html
+apps/slices-build/**/*.css
+apps/slices-build/**/*.css.map
+apps/slices-build/**/*.js
+apps/slices-build/**/*.js.map
+apps/slices-build/**/*.js.LICENSE
+apps/slices-build/**/*.json

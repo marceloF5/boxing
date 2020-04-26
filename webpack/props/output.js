@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = (env) => {
     let slicePath = '';
-    const defaultPath = '../../apps/app-portal';
+    const defaultPath = '../../apps/slices-build';
     const sliceParam = env.slice || '';
 
     if (typeof sliceParam === 'boolean' && sliceParam) {
@@ -13,7 +13,7 @@ module.exports = (env) => {
 
     const outputBase = {
         path: path.resolve(__dirname, slicePath),
-        filename: `[name].${env.production ? '"[hash]"' : ''}.js`,
+        filename: `main.${env.production ? '[hash]' : ''}.js`,
         publicPath: '/',
     };
 
