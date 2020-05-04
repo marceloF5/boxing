@@ -1,4 +1,4 @@
-# Contributing
+<h2 style="color:red" align="center"> Contributing </h3>
 
 ### What you will need:
 

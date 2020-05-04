@@ -1,11 +1,5 @@
 <h2 style="color:red" align="center"> UI Root </h3>
 
-<p align="center">
-  <a href="#rocket">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#ballot_box_with_check-goals">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licence">Licence</a>
-</p>
-
 ## :rocket: Overview
 
 UI root is an example of the project for architecture fundamentals and studies. This project will help us understand tightly how we can build our structure and architecture using the power of WEBPACK.
