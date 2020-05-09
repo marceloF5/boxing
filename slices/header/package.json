@@ -1,15 +1,10 @@
 {
     "name": "@portal/slice-header",
     "version": "1.0.0",
-    "main": "src/entry.js",
-    "module": "src/entry.js",
+    "description": "Portal Slice Header",
     "license": "MIT",
-    "scripts": {
-        "start": "webpack-dev-server --progress --open --config webpack/webpack.config.dev.js",
-        "build": "webpack --config webpack/webpack.config.common.js",
-        "build:prod": "webpack --config webpack/webpack.config.prod.js",
-        "test": "yarn jest"
-    },
+    "main": "./src/entry.js",
+    "module": "./src/entry.js",
     "dependencies": {
         "@ui/button": "^1.0.0",
         "react": "^16.13.1",
@@ -25,5 +20,13 @@
         "jest-haste-map": "^25.4.0",
         "jest-resolve": "^25.4.0",
         "jest-styled-components": "^7.0.2"
+    },
+    "webpackEntries": {
+        "client": {
+            "slice-header": "/src/client.js"
+        },
+        "server": {
+            "slice-header": "/src/server.js"
+        }
     }
 }

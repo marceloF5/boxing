@@ -4,10 +4,6 @@
     "main": "src/entry.js",
     "module": "src/entry.js",
     "license": "MIT",
-    "scripts": {
-        "build": "webpack --config webpack/webpack.config.common.js",
-        "build:prod": "webpack --config webpack/webpack.config.prod.js"
-    },
     "peerDependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
