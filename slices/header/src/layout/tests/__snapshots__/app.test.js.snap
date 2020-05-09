@@ -3,17 +3,7 @@
 exports[`App should render 1`] = `
 "<div>
   <h1>
-    App component
+    Header
   </h1>
-  <p>
-    Hello world!
-  </p>
-  <Button disabled={false} variant=\\"primary\\">
-    <styled.button disabled={false} variant=\\"primary\\">
-      <button disabled={false} className=\\"sc-AxjAm hpxLGq\\">
-        Add to Bag
-      </button>
-    </styled.button>
-  </Button>
 </div>"
 `;
