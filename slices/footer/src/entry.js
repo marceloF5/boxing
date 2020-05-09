@@ -1,8 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+import App from './layout/app';
 
-const App = () => {
-    return <h1>Footer</h1>;
-};
+const Entry = () => <App />;
 
-render(<App />, document.getElementById('slice-footer'));
+export default Entry;
