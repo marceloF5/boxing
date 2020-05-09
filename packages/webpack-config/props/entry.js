@@ -1,17 +1,21 @@
 const path = require('path');
 
 module.exports = ({ slice }) => {
-    let defaultBuildPath = '../../../apps/slices-map/main.js';
+    let defaultClientPath = '../../../apps/slices-map/main.js';
+    let defaultServerPath = '../../../apps/slices-map/main.js';
     const defaultSlicePath = '../../../slices';
 
     if (typeof slice !== 'boolean') {
-        defaultBuildPath = `${defaultSlicePath}/${
+        defaultClientPath = `${defaultSlicePath}/${
             slice.split('-')[1]
         }/src/client.js`;
-    }
 
+        defaultServerPath = `${defaultSlicePath}/${
+            slice.split('-')[1]
+        }/src/server.js`;
+    }
     return {
-        main: path.resolve(__dirname, defaultBuildPath),
+        client: path.resolve(__dirname, defaultClientPath),
     };
 };
 
