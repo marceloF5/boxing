@@ -25,7 +25,7 @@ module.exports = (env) => {
             filename: 'index.html',
             template: path.resolve(
                 __dirname,
-                '../../apps/slices-map/index.html'
+                '../../../apps/slices-map/index.html'
             ),
         }),
     ];
