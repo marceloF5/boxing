@@ -8,7 +8,8 @@ module.exports = (env) => {
     const pluginsBase = [
         // new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: `main${env.production ? '.[hash]' : ''}.css`,
+            // filename: `main${env.production ? '.[hash]' : ''}.css`,
+            filename: `main.css`,
         }),
         new ManifestPlugin({
             fileName: 'manifest.json',

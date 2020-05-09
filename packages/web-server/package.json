@@ -1,0 +1,11 @@
+{
+    "name": "@ui/web-server",
+    "description": "The web-server for ui-root apps",
+    "version": "1.0.0",
+    "bin": {
+        "web-server": "./bin/run"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
