@@ -1,14 +1,14 @@
 const path = require('path');
 
-module.exports = (env) => {
+export default (env) => {
     let slicePath = '';
-    const defaultPath = '../../../apps/slices-build';
+    const defaultPath = '../../../../apps/slices-build';
     const sliceParam = env.slice || '';
 
     if (typeof sliceParam === 'boolean' && sliceParam) {
         slicePath = defaultPath;
     } else {
-        slicePath = `../../../apps/slices-build/${sliceParam.split('-')[1]}`;
+        slicePath = `../../../../apps/slices-build/${sliceParam.split('-')[1]}`;
     }
 
     const outputBase = {

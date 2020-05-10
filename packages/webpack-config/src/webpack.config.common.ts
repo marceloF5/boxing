@@ -1,10 +1,10 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const entry = require('./props/entry');
-const output = require('./props/output');
-const { moduleBase } = require('./props/module');
-const plugins = require('./props/plugins');
+import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import entry from './props/entry'
+import output from './props/output'
+import moduleBase from './props/module'
+import plugins from './props/plugins'
 
-module.exports = (env) => {
+export default (env) => {
     return {
         entry: entry(env),
         output: output(env),

@@ -1,6 +1,6 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.config.common');
-const plugins = require('./props/plugins');
+import * as webpackMerge from 'webpack-merge';
+import common from './webpack.config.common';
+import plugins from './props/plugins';
 
 const devServer = {
     port: 9000,
@@ -8,7 +8,7 @@ const devServer = {
 };
 
 module.exports = (env) =>
-    merge(common(env), {
+    webpackMerge(common(env), {
         devServer,
         devtool: 'inline-source-map',
         plugins: plugins(env).pluginsCustom,

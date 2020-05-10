@@ -1,10 +1,10 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// import{ CleanWebpackPlugin } from 'clean-webpack-plugin';
+import * as ManifestPlugin from 'webpack-manifest-plugin';
+import * as MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import * as HtmlWebpackPlugin from 'html-webpack-plugin'
 
-module.exports = (env) => {
+export default (env) => {
     const pluginsBase = [
         // new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
