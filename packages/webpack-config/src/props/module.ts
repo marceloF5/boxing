@@ -1,6 +1,6 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import {loader} from 'mini-css-extract-plugin';
 
-const moduleBase = {
+export default {
     rules: [
         {
             test: /\.(jsx|js)$/,
@@ -15,7 +15,7 @@ const moduleBase = {
         },
         {
             test: /\.(s*)css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            use: [loader, 'css-loader', 'sass-loader'],
         },
         {
             test: /\.(jpe?g|png|svg)$/,
@@ -28,4 +28,3 @@ const moduleBase = {
     ],
 };
 
-module.exports = { moduleBase };

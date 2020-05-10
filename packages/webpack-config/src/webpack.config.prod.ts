@@ -1,9 +1,9 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.config.common');
-const plugins = require('./props/plugins');
+import * as webpackMerge from 'webpack-merge'
+import common from './webpack.config.common'
+import plugins from './props/plugins'
 
-module.exports = (env) =>
-    merge(common(env), {
+export default (env) =>
+    webpackMerge(common(env), {
         devtool: 'source-map',
         plugins:
             typeof env.slice !== 'boolean'
