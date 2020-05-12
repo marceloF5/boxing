@@ -21,8 +21,10 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["react", "react-hooks", "prettier"],
+    "parser": "babel-eslint",
+    "plugins": ["sort-imports-es6-autofix", "react", "react-hooks", "prettier"],
     "rules": {
+        "import/extensions": [1, "never"],
         "import/no-cycle": [2, { "maxDepth": 1 }],
         "prettier/prettier": "error",
         "react/jsx-props-no-spreading": "off",
@@ -30,7 +32,14 @@
             "warn",
             { "extensions": [".jsx", ".js"] }
         ],
-        "import/no-unresolved": [2, { "caseSensitive": false }],
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            2,
+            {
+                "ignoreCase": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+            }
+        ],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "off",
         "no-unused-expressions": ["error", { "allowShortCircuit": true }],

@@ -1,40 +1,26 @@
-
-// {
-//     "compilerOptions": {
-//       "module": "commonjs",
-//       "esModuleInterop": true,
-//       "target": "es6",
-//       "moduleResolution": "node",
-//       "sourceMap": true,
-//       "outDir": "lib"
-//     },
-//     "lib": ["es2015"]
-//   }
-
-
-  {
+{
     "compilerOptions": {
-      "target": "es2018",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "declaration": true,
-      "sourceMap": true,
-      "removeComments": true,
-      "strict": true,
-      "noImplicitAny": false,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-      "allowSyntheticDefaultImports": false,
-      "esModuleInterop": false,
-      "preserveSymlinks": true,
-      "allowUmdGlobalAccess": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "suppressImplicitAnyIndexErrors": true,
-      "resolveJsonModule": true,
-      "rootDir": "src",
-      "outDir": "lib"
-    },
-  }
+        "target": "es2018",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": true,
+        "sourceMap": true,
+        "removeComments": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": false,
+        "esModuleInterop": false,
+        "preserveSymlinks": true,
+        "allowUmdGlobalAccess": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "outDir": "lib"
+    }
+}
