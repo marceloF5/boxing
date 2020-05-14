@@ -33,11 +33,11 @@ yarn-error.log*
 # packages
 packages/*/lib/
 
-# slices-build
-apps/slices-build/**/*.html
-apps/slices-build/**/*.css
-apps/slices-build/**/*.css.map
-apps/slices-build/**/*.js
-apps/slices-build/**/*.js.map
-apps/slices-build/**/*.js.LICENSE
-apps/slices-build/**/*.json
+# app-portal
+apps/app-portal/**/*.html
+apps/app-portal/**/*.css
+apps/app-portal/**/*.css.map
+apps/app-portal/**/*.js
+apps/app-portal/**/*.js.map
+apps/app-portal/**/*.js.LICENSE
+apps/app-portal/**/*.json

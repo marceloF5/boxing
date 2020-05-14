@@ -1,12 +1,35 @@
-import * as webpackMerge from 'webpack-merge'
-import common from './webpack.config.common'
-import plugins from './props/plugins'
+import * as path from 'path';
+import { createConfig } from './index';
+import { Environment } from './types/Environment';
+import { ITemplateEntry } from './types/ITemplateEntry';
+import { IPath } from './types/IPath';
+import { IOptions } from './types/IOptions';
 
-export default (env) =>
-    webpackMerge(common(env), {
-        devtool: 'source-map',
-        plugins:
-            typeof env.slice !== 'boolean'
-                ? plugins(env).pluginsBase
-                : plugins(env).pluginsCustom,
-    });
+const slice = 'slice-footer';
+const slicePart = slice.split('-')[1];
+const rootPath = path.resolve(__dirname, '../../../');
+const baseDir = `${rootPath}/slices/${slicePart}/src`;
+const baseOutput = `${rootPath}/apps/app-portal/${slicePart}`;
+const pathClientName = `${baseDir}/client`;
+
+const environment: Environment = 'production';
+
+const entries: ITemplateEntry[] = [
+    {
+        entryname: slice,
+        pathname: pathClientName,
+    },
+];
+
+const options: IOptions = {
+    entries,
+    environment,
+};
+
+const paths: IPath = {
+    projectDir: baseDir,
+    projectSourceDir: baseDir,
+    outputDir: baseOutput,
+};
+
+export default createConfig(paths, options);

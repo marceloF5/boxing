@@ -1,9 +1,9 @@
 import * as webpack from 'webpack';
 import { ITemplateEntry } from '../types/ITemplateEntry';
 
-export default (pages: ITemplateEntry[] = []): webpack.Entry => {
-    return pages.reduce((memo: webpack.Entry, page: ITemplateEntry) => {
-        const { entryname, pathname } = page;
+export default (entries: ITemplateEntry[] = []): webpack.Entry => {
+    return entries.reduce((memo: webpack.Entry, entry: ITemplateEntry) => {
+        const { entryname, pathname } = entry;
 
         return { ...memo, [entryname]: pathname };
     }, {});

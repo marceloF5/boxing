@@ -6,15 +6,12 @@
     "module": "apps/src/entry.js",
     "license": "MIT",
     "scripts": {
-        "start": "webpack-dev-server --progress --open --config packages/webpack-config/lib/webpack.config.dev.js --env.slice",
-        "start:dist": "node packages/web-server/src/index.js",
-        "build": "webpack --env.production --config packages/webpack-config/lib/webpack.config.prod.js --env.slice",
-        "build:dev": "webpack --config packages/webpack-config/lib/webpack.config.prod.js --env.slice",
-        "start:all": "lerna run start --parallel",
-        "build:all": "lerna run build",
-        "test:all": "lerna run test",
-        "lint:all": "eslint '**/**/src/**/*.js' --fix --ignore-pattern node_modules",
-        "build:prod": "yarn test:all && yarn build:all && webpack --env.production --config packages/webpack-config/lib/webpack.config.prod.js"
+        "start": "lerna run start",
+        "build": "lerna run build",
+        "build:dev": "webpack --config packages/webpack-config/lib/webpack.config.dev.js --env.slice",
+        "build:prod": "webpack --config packages/webpack-config/lib/webpack.config.prod.js --env.slice",
+        "test": "lerna run test",
+        "lint": "eslint '**/**/src/**/*.js' --fix --ignore-pattern node_modules"
     },
     "workspaces": [
         "packages/*",
