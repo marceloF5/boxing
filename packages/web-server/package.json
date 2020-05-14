@@ -5,6 +5,9 @@
     "bin": {
         "web-server": "./bin/run"
     },
+    "scripts": {
+        "start": "node src/index.js"
+    },
     "dependencies": {
         "express": "^4.17.1"
     }

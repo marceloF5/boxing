@@ -1,20 +1,14 @@
 import * as webpack from 'webpack';
 import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
-import isProduction from '../helpers/isProduction';
 import getBabelPlugins from '../helpers/getBabelPlugins';
 import getEntries from '../helpers/getEntries';
 import { ConfigurationFunction } from '../types/ConfigurationFunction';
 
 const createConfig: ConfigurationFunction = (paths, options) => {
-    const isProd = isProduction(options);
-    const cssFilename = isProd
-        ? '[name].client.[contenthash].css'
-        : '[name].client.css';
-
     const config: webpack.Configuration = {
         // name: 'client',
         target: 'web',
-        entry: getEntries(options.pages),
+        entry: getEntries(options.entries),
         resolve: {
             extensions: ['.jsx', '.js'],
         },

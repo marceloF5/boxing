@@ -1,10 +1,11 @@
 const path = require('path');
 // import{ CleanWebpackPlugin } from 'clean-webpack-plugin';
 import * as ManifestPlugin from 'webpack-manifest-plugin';
-import * as MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import * as HtmlWebpackPlugin from 'html-webpack-plugin'
+import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default (env) => {
+    console.log(env);
     const pluginsBase = [
         // new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -14,7 +15,8 @@ export default (env) => {
         new ManifestPlugin({
             fileName: 'manifest.json',
             map: (file) => {
-                file.name = file.name.replace(/\./g, '');
+                file.name =
+                    file.name !== null ? file.name.replace(/\./g, '') : '';
                 return file;
             },
         }),

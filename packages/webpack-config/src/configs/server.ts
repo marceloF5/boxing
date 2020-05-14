@@ -1,5 +1,4 @@
 import * as webpack from 'webpack';
-import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import getBabelPlugins from '../helpers/getBabelPlugins';
 import getEntries from '../helpers/getEntries';
 import { ConfigurationFunction } from '../types/ConfigurationFunction';
@@ -15,7 +14,7 @@ const createConfig: ConfigurationFunction = (paths, options) => {
     const config: webpack.Configuration = {
         name: 'server',
         target: 'node',
-        entry: getEntries(options.pages),
+        entry: getEntries(options.entries),
         output: {
             filename: isProd
                 ? '[name].server.[chunkhash].js'
@@ -94,14 +93,14 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                 },
             ],
         },
-        optimization: {
-            minimizer: [
-                new UglifyJsPlugin({
-                    extractComments: true,
-                }),
-            ],
-            // splitChunks: false,
-        },
+        // optimization: {
+        //     minimizer: [
+        //         new UglifyJsPlugin({
+        //             extractComments: true,
+        //         }),
+        //     ],
+        //     splitChunks: false,
+        // },
         // plugins: [
         //     new webpack.DefinePlugin({
         //         'process.browser': false,

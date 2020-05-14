@@ -1,4 +1,3 @@
-import * as webpack from 'webpack';
 import * as ManifestPlugin from 'webpack-manifest-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { ConfigurationFunction } from '../types/ConfigurationFunction';
@@ -10,11 +9,16 @@ const createConfig: ConfigurationFunction = (paths, options) => {
         ? '[name].client.[contenthash].css'
         : '[name].client.css';
 
+    const jsFilename = isProd
+        ? '[name].client.[contenthash].js'
+        : '[name].client.js';
+
     return {
         context: paths.projectDir,
         output: {
             path: paths.outputDir,
             pathinfo: false,
+            filename: jsFilename,
         },
         mode: options.environment,
         // optimization: {
