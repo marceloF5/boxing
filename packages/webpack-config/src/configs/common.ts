@@ -21,20 +21,9 @@ const createConfig: ConfigurationFunction = (paths, options) => {
             filename: jsFilename,
         },
         mode: options.environment,
-        // optimization: {
-        //     ...getOptimizations(options),
-        // },
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
-            // modules: ['node_modules', paths.nodeModulesDir],
-            // symlinks: false,
-            // alias: {
-            //     ...getReactAliases(options),
-            // },
         },
-        // resolveLoader: {
-        //     modules: ['node_modules', paths.nodeModulesDir],
-        // },
         module: {
             rules: [
                 {
@@ -55,8 +44,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                     loader: require.resolve('file-loader'),
                     options: {
                         name: 'images/[name].[hash:15].[ext]',
-                        // postTransformPublicPath: (name) =>
-                        //     `__webpack_public_path__ + ${name}`,
                     },
                 },
                 {
@@ -64,8 +51,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                     loader: require.resolve('file-loader'),
                     options: {
                         name: 'videos/[name].[hash:15].[ext]',
-                        // postTransformPublicPath: (name) =>
-                        //     `__webpack_public_path__ + ${name}`,
                     },
                 },
                 {
@@ -73,8 +58,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                     loader: require.resolve('file-loader'),
                     options: {
                         name: 'fonts/[name].[hash:15].[ext]',
-                        // postTransformPublicPath: (name) =>
-                        //     `__webpack_public_path__ + ${name}`,
                     },
                 },
                 {
@@ -93,31 +76,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
             ],
         },
         plugins: [
-            // new TimeFixPlugin(),
-            // Prevents importing files from outside of src/ (or node_modules/).
-            // new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]), // disabled until next release https://github.com/facebook/create-react-app/issues/4740
-            // new CaseSensitivePathsPlugin(),
-            // new webpack.DefinePlugin({
-            //     'process.env': {
-            //         NODE_ENV: JSON.stringify(options.environment),
-            //         IS_SINGLE_RENDERER: JSON.stringify(true),
-            //     },
-            //     'process.mobileOnly': options.mobileOptimized,
-            //     __MOCKS__: false,
-            // }),
-            // options.mobileOptimized &&
-            //     new MediaQueryPlugin({
-            //         include: true,
-            //         queries: {
-            //             '(min-width: 60em)': 'desktop',
-            //             '(min-width: 80em)': 'desktop',
-            //             '(min-width: 112.5em)': 'desktop',
-            //         },
-            //     }),
-            // options.mobileOptimized &&
-            //     new FilterOutputPlugin({
-            //         exclude: /-desktop\..+\.css$/,
-            //     }),
             new MiniCssExtractPlugin({
                 filename: cssFilename,
             }),
@@ -129,7 +87,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                     return file;
                 },
             }),
-            // !isProd && new webpack.WatchIgnorePlugin([paths.outputDir]),
         ].filter(Boolean),
     };
 };
