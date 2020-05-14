@@ -1,12 +1,10 @@
 import * as webpack from 'webpack';
-import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import getBabelPlugins from '../helpers/getBabelPlugins';
 import getEntries from '../helpers/getEntries';
 import { ConfigurationFunction } from '../types/ConfigurationFunction';
 
 const createConfig: ConfigurationFunction = (paths, options) => {
     const config: webpack.Configuration = {
-        // name: 'client',
         target: 'web',
         entry: getEntries(options.entries),
         resolve: {
@@ -46,26 +44,6 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     use: 'file-loader',
                 },
-            ],
-        },
-        // plugins: [
-        //     new MiniCssExtractPlugin({
-        //         filename: cssFilename,
-        //     }),
-        //     new ManifestPlugin({
-        //         fileName: 'manifest.json',
-        //         map: (file) => {
-        //             file.name =
-        //                 file.name !== null ? file?.name.replace(/\./g, '') : '';
-        //             return file;
-        //         },
-        //     }),
-        // ],
-        optimization: {
-            minimizer: [
-                new UglifyJsPlugin({
-                    extractComments: true,
-                }),
             ],
         },
     };
