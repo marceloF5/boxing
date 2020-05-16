@@ -1,0 +1,7 @@
+{
+  "name": "@ui/tsconfig",
+  "description": "The typescript configuration files for portal-box",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED"
+}
