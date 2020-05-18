@@ -6,7 +6,7 @@
     "main": "./src/entry.js",
     "module": "./src/entry.js",
     "dependencies": {
-        "@ui/button": "^1.0.0",
+        "@boxing/button": "^1.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
     },
