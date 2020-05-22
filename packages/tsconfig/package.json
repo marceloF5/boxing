@@ -1,6 +1,6 @@
 {
-  "name": "@ui/tsconfig",
-  "description": "The typescript configuration files for portal-box",
+  "name": "@boxing/tsconfig",
+  "description": "The typescript configuration files for portal-boxing",
   "version": "1.0.0",
   "main": "index.js",
   "license": "UNLICENSED"

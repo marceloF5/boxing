@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "ui-root",
+    "name": "boxing",
     "version": "1.0.0",
     "main": "apps/src/entry.js",
     "module": "apps/src/entry.js",

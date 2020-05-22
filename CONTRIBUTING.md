@@ -31,4 +31,4 @@
 6.  Ask for code reviews
 7.  Ask for to master/owner do merge manually (Pipelines and CI are being building)
 
-**Note:** If you want to make ui-root even better by suggesting features or implementing them, all you need to do is open a [issue](https://github.com/marceloF5/ui-root/issues) and contribute.
+**Note:** If you want to make "boxing" even better by suggesting features or implementing them, all you need to do is open a [issue](https://github.com/marceloF5/boxing/issues) and contribute.

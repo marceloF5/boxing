@@ -1,6 +1,6 @@
 {
-    "name": "@ui/web-server",
-    "description": "The web-server for ui-root apps",
+    "name": "@boxing/web-server",
+    "description": "The web-server for boxing apps",
     "version": "1.0.0",
     "bin": {
         "web-server": "./bin/run"

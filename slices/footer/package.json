@@ -1,5 +1,5 @@
 {
-    "name": "@portal/slice-footer",
+    "name": "@boxing/slice-footer",
     "version": "1.0.0",
     "main": "src/entry.js",
     "module": "src/entry.js",
