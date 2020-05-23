@@ -1,8 +1,8 @@
-<h2 style="color:red" align="center"> UI Root </h3>
+<h2 style="color:red" align="center"> 🥊 Boxing </h3>
 
 ## :rocket: Overview
 
-UI root is an example of the project for architecture fundamentals and studies. This project will help us understand tightly how we can build our structure and architecture using the power of WEBPACK.
+Boxing is an example of the project for architecture fundamentals and studies. This project will help us understand tightly how we can build our structure and architecture using the power of WEBPACK.
 
 This project also has a goals to explorer examples for monorepo, microfrontend, tests (using jest), CI, Design System and React ecosystem.
 
