@@ -1,14 +1,12 @@
-// html skeleton provider
-export default function template(
-    slice,
-    initialState = {},
-    title,
-    content = ''
-) {
-    const styles = `
+import { ITemplate } from '../types/ITemplate';
+
+export const template = (templateContent: ITemplate) => {
+    const { slice, html, initialState, title } = templateContent;
+
+    const cssFiles = `
         <link href="${slice}/main.css" rel="stylesheet">
     `;
-    const scripts = `
+    const jsFiles = `
         <script>
             window.__slice-${slice}__ = ${JSON.stringify(initialState)}
         </script>
@@ -21,18 +19,17 @@ export default function template(
             <head>
                 <meta charset="utf-8">
                 <title>${title}</title>
-                ${styles}
+                ${cssFiles}
             </head>
             <body>
-                <div class="content">
-                    <div id="app" class="wrap-inner">
-                    ${content}
-                    </div>
+                <div class="wrapper">
+                    ${html}
                 </div>
-                ${scripts}
+                ${initialState}
+                ${jsFiles}
             </body>
         </html>
     `;
 
     return page;
-}
+};
