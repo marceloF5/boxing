@@ -8,7 +8,7 @@ import App from './layout/app';
    ========================================================================== */
 
 function render(initialState) {
-    const html = renderToString(<App {...initialState} />);
+    const html = renderToString(<App />);
     return html;
 }
 

@@ -12,8 +12,8 @@ module.exports = {
     },
     moduleNameMapper: {
         '^.+\\.(css|less|scss)$': 'babel-jest',
-        '@ui/(.+)$': '<rootDir>/packages/$1/src',
-        '@portal/(.+)$': '<rootDir>/slices/$1/src',
+        '@boxing/(.+)$': '<rootDir>/packages/$1/src',
+        '@boxing/(.+)$': '<rootDir>/slices/$1/src',
     },
     setupFilesAfterEnv: ['<rootDir>/config/jest/test.config.js'],
     transform: {

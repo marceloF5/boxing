@@ -9,7 +9,7 @@ const slice = 'slice-footer';
 const slicePart = slice.split('-')[1];
 const rootPath = path.resolve(__dirname, '../../../');
 const baseDir = `${rootPath}/slices/${slicePart}/src`;
-const baseOutput = `${rootPath}/apps/app-porta/${slicePart}`;
+const baseOutput = `${rootPath}/apps/app-portal/${slicePart}`;
 const pathClientName = `${baseDir}/client`;
 
 const environment: Environment = 'development';
