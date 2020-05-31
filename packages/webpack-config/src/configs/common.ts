@@ -20,7 +20,7 @@ const createConfig: ConfigurationFunction = (paths, options) => {
             pathinfo: false,
             filename: jsFilename,
         },
-        mode: options.environment,
+        mode: 'production',
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
