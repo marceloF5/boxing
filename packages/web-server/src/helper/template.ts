@@ -4,13 +4,13 @@ export const template = (templateContent: ITemplate) => {
     const { slice, html, initialState, title } = templateContent;
 
     const cssFiles = `
-        <link href="${slice}/main.css" rel="stylesheet">
+        <link href="slice-${slice}.client.css" rel="stylesheet">
     `;
     const jsFiles = `
         <script>
             window.__slice-${slice}__ = ${JSON.stringify(initialState)}
         </script>
-        <script src="${slice}/main.js"></script>
+        <script src="slice-${slice}.client.80daa506b054d811c677.js" ></script>
     `;
 
     const page = `
@@ -22,10 +22,10 @@ export const template = (templateContent: ITemplate) => {
                 ${cssFiles}
             </head>
             <body>
-                <div class="wrapper">
+                <div id="slice-${slice}">
                     ${html}
                 </div>
-                ${initialState}
+
                 ${jsFiles}
             </body>
         </html>

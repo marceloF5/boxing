@@ -15,8 +15,8 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                 {
                     test: /(\.js(x?)$|\.ts(x?)$)/,
                     include: [
-                        /@ui.*/,
-                        /@portal(\/|\\)slice-.*/,
+                        /@boxing.*/,
+                        /@boxing(\/|\\)slice-.*/,
                         paths.projectSourceDir,
                     ],
                     exclude: /node_modules/,

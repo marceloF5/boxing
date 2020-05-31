@@ -11,15 +11,17 @@ const createConfig: ConfigurationFunction = (paths, options) => {
     //     outputFormat: 'humanVerbose',
     // });
 
+    const jsFilename = isProd
+        ? '[name].server.[contenthash].js'
+        : '[name].server.js';
+
     const config: webpack.Configuration = {
         name: 'server',
         target: 'node',
         entry: getEntries(options.entries),
         output: {
-            filename: isProd
-                ? '[name].server.[chunkhash].js'
-                : '[name].server.js',
-            libraryTarget: 'commonjs',
+            filename: jsFilename,
+            // libraryTarget: 'commonjs',
         },
         // resolveLoader: {
         //     alias: {
@@ -33,8 +35,8 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                 {
                     test: /(\.js(x?)$|\.ts(x?)$)/,
                     include: [
-                        /@ui.*/,
-                        /@portal(\/|\\)slice-.*/,
+                        /@boxing.*/,
+                        /@boxing(\/|\\)slice-.*/,
                         paths.projectSourceDir,
                     ],
                     exclude: /node_modules/,

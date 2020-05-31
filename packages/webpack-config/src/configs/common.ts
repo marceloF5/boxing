@@ -20,7 +20,7 @@ const createConfig: ConfigurationFunction = (paths, options) => {
             pathinfo: false,
             filename: jsFilename,
         },
-        mode: options.environment,
+        mode: 'production',
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
@@ -29,8 +29,8 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                 {
                     test: /\.(s*)css$/,
                     include: [
-                        /@ui.*/,
-                        /@portal(\/|\\)slice-.*/,
+                        /@boxing.*/,
+                        /@boxing(\/|\\)slice-.*/,
                         paths.projectSourceDir,
                     ],
                     use: [
@@ -83,7 +83,7 @@ const createConfig: ConfigurationFunction = (paths, options) => {
                 fileName: 'manifest.json',
                 map: (file) => {
                     file.name =
-                        file.name !== null ? file?.name.replace(/\./g, '') : '';
+                        file.path !== null ? file?.path.replace(/\./g, '') : '';
                     return file;
                 },
             }),

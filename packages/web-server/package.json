@@ -2,21 +2,23 @@
     "name": "@boxing/web-server",
     "version": "1.0.0",
     "description": "The web-server for boxing apps",
+    "license": "MIT",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
-    "bin": {
-        "web-server": "./bin/run"
-    },
     "scripts": {
         "start": "node lib/index.js",
         "build": "rimraf -rf ./lib && tsc"
     },
     "dependencies": {
+        "@babel/register": "^7.10.1",
         "@boxing/tsconfig": "^1.0.0",
-        "express": "^4.17.1"
+        "compression": "^1.7.4",
+        "express": "^4.17.1",
+        "ignore-styles": "^5.0.1"
     },
     "devDependencies": {
         "@types/express": "^4.17.6",
-        "@types/express-serve-static-core": "^4.17.7"
+        "@types/express-serve-static-core": "^4.17.7",
+        "@types/ignore-styles": "^5.0.0"
     }
 }

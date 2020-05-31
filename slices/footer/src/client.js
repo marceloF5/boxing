@@ -5,7 +5,7 @@ import Entry from './entry';
 /* ==========================================================================
    Client side rendering
    ========================================================================== */
-const rootEl = document.getElementById('slice-header');
+const rootEl = document.getElementById('slice-footer');
 
 function render(Component) {
     ReactDom.hydrate(<Component />, rootEl);

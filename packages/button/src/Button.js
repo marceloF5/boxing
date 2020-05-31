@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-unresolved
-import spacing from '@ui/theme';
+import spacing from '@boxing/theme';
 
 const APPEARANCES = {
     PRIMARY: 'primary',

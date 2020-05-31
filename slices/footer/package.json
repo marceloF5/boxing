@@ -1,11 +1,20 @@
 {
     "name": "@boxing/slice-footer",
     "version": "1.0.0",
+    "description": "Portal Slice Footer",
+    "license": "MIT",
     "main": "src/entry.js",
     "module": "src/entry.js",
-    "license": "MIT",
     "peerDependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
+    },
+    "webpackEntries": {
+        "client": {
+            "slice-footer": "/src/client.js"
+        },
+        "server": {
+            "slice-footer": "/src/server.js"
+        }
     }
 }
