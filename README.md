@@ -13,7 +13,7 @@ Boxing is an example of the project for architecture fundamentals and studies. T
 
 Thank you for being interested on making this package better. We encourage everyone to help improving this project with some new features, bug fixes and performance issues. Please take a little bit of your time to read our guides, so this process can be faster and easier.
 
-### Contribution Guidelines
+### 📖 Contribution Guidelines
 
 Take a moment to read about our [Contribution Guidelines](/.github/CONTRIBUTING.md) so you can understand how to submit an issue, commit and create pull requests.
 
