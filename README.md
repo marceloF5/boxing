@@ -1,6 +1,6 @@
 <h2 style="color:red" align="center"> 🥊 Boxing </h3>
 
-## :: Goals
+## :dart: Goals
 
 This project has a goals to explorer examples for monorepo, microfrontend, tests (using jest), CI, Design System and React ecosystem.
 
