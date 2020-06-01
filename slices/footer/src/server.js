@@ -7,8 +7,8 @@ import App from './layout/app';
    - Exports function that receives a view model and outputs rendered html as a string
    ========================================================================== */
 
-function render(initialState) {
-    const html = renderToString(<App />);
+function render(initialState = {}) {
+    const html = renderToString(<App count={initialState.data.count} />);
     return html;
 }
 

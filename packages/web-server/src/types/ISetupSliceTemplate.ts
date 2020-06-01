@@ -1,8 +1,7 @@
 import { IInitialState } from './IInitialState';
 
-export interface ITemplate {
-    slice: string;
+export interface ISetupSliceTemplate {
+    sliceName: string;
     initialState: IInitialState;
-    title: string;
-    html: string;
+    component: string;
 }
