@@ -1,4 +1,4 @@
-<h2 style="color:red"> 🥊 Boxing </h3>
+<h2 align="center"> 🥊 Boxing </h2>
 
 ## :dart: Goals
 
