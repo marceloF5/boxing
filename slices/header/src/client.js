@@ -8,7 +8,8 @@ import Entry from './entry';
 const rootEl = document.getElementById('slice-header');
 
 function render(Component) {
-    ReactDom.hydrate(<Component />, rootEl);
+    console.log('Hydrate rendered');
+    ReactDom.hydrate(<Component countInitial={10} />, rootEl);
 }
 
 render(Entry);
