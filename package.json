@@ -8,14 +8,15 @@
     "scripts": {
         "start": "lerna run start",
         "build": "lerna run build",
-        "build:dev": "webpack --config packages/webpack-config/lib/webpack.config.dev.js --env.slice",
-        "build:prod": "webpack --config packages/webpack-config/lib/webpack.config.prod.js --env.slice",
+        "build:dev": "webpack --config tooling/webpack-config/lib/webpack.config.dev.js --env.slice",
+        "build:prod": "webpack --config tooling/webpack-config/lib/webpack.config.prod.js --env.slice",
         "test": "lerna run test",
         "lint": "eslint '**/**/src/**/*.js' --fix --ignore-pattern node_modules"
     },
     "workspaces": [
-        "packages/*",
-        "slices/*"
+        "components/*",
+        "slices/*",
+        "tooling/*"
     ],
     "dependencies": {
         "axios": "^0.19.2",

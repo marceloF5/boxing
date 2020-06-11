@@ -30,8 +30,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# packages
-packages/*/lib/
+# tooling
+tooling/**/lib/*
 
 # app-portal
 apps/app-portal/**/*.html
