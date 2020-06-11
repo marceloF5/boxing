@@ -1,8 +1,8 @@
 import React from 'react';
 import './app.css';
 
-const App = () => {
-    const [count, setCount] = React.useState(0);
+const App = ({ count: initialCount = 10 }) => {
+    const [count, setCount] = React.useState(initialCount);
 
     const increment = () => {
         setCount(count + 1);
