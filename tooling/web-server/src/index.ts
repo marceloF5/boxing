@@ -7,12 +7,12 @@ import * as path from 'path';
 import { IInitialState } from './types/IInitialState';
 import { ISetupSliceTemplate } from './types/ISetupSliceTemplate';
 import { createTemplate } from './helper/template';
-import render from '../../../slices/footer/src/server';
+import render from '../../../slices/header/src/server';
 import WebServer from './server/WebServer';
 
 const initialState: IInitialState = { isFetching: false, data: { count: 1 } };
 
-const sliceName = 'footer';
+const sliceName = 'header';
 const buildDir = path.resolve(
     __dirname,
     `../../../apps/app-portal/${sliceName}`
@@ -23,6 +23,8 @@ const setupSliceTemplate: ISetupSliceTemplate = {
     initialState,
     component: render(initialState),
 };
+
+console.log(setupSliceTemplate.component);
 
 const pageSlice = createTemplate(setupSliceTemplate);
 

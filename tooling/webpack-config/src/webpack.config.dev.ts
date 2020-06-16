@@ -5,7 +5,7 @@ import { ITemplateEntry } from './types/ITemplateEntry';
 import { IPath } from './types/IPath';
 import { IOptions } from './types/IOptions';
 
-const slice = 'slice-footer';
+const slice = 'slice-header';
 const slicePartName = slice.split('-')[1];
 const rootPath = path.resolve(__dirname, '../../../');
 const baseDir = `${rootPath}/slices/${slicePartName}/src`;
