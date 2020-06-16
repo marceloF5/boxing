@@ -1,6 +1,8 @@
 import * as path from 'path';
 import * as express from 'express';
 import * as compression from 'compression';
+
+import routes from '../routes';
 export default class WebServer {
     app: express.Application;
     template: string;
@@ -16,6 +18,7 @@ export default class WebServer {
         this.createHttpServer();
         this.staticFile();
         this.ssrHandler();
+        this.routes();
     }
 
     private staticFile(): void {
@@ -31,6 +34,11 @@ export default class WebServer {
             res.setHeader('Cache-Control', 'assets, max-age=604800');
             res.send(this.template);
         });
+    }
+
+    private routes() {
+        this.app.use(express.json());
+        this.app.use(routes);
     }
 
     public start(): express.Application {
