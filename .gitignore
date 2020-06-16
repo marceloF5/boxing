@@ -31,7 +31,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # tooling
-tooling/**/lib/*
+tooling/**/lib/**/*
 
 # app-portal
 apps/app-portal/**/*.html
